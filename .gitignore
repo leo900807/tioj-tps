@@ -1,0 +1,8 @@
+# executables
+*.exe
+*.o
+
+# testdatas
+/*/sandbox
+/*/tests
+/*/logs

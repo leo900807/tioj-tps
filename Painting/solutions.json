@@ -1,0 +1,15 @@
+{
+	"AC.cpp": {
+		"verdict": "model_solution"
+	},
+	"sub12.cpp": {
+		"verdict": "time_limit",
+		"except": {
+			"s1": "correct",
+			"s2": "correct"
+		}
+	},
+	"WA.cpp": {
+		"verdict": "incorrect"
+	}
+}

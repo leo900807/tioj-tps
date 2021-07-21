@@ -1,0 +1,6 @@
+@subtask samples
+manual sample1.in
+
+@subtask s1
+@include samples
+manual sample2.in

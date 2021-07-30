@@ -21,7 +21,7 @@
 			"index": 3,
 			"score": 40,
 			"text": "無額外限制。",
-			"validators": ["s3.cpp"]
+			"validators": []
 		}
 	}
 }

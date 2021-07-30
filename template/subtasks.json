@@ -9,7 +9,7 @@
 			"index": 1,
 			"score": 100,
 			"text": "subtask description",
-			"validators": [""]
+			"validators": []
 		}
 	}
 }

@@ -2513,7 +2513,8 @@ NORETURN void InStream::quit(TResult result, const char* msg)
         halt(1);
     }
 
-    std::fprintf(stderr, " %s", msg);
+    if(msg[0])
+        std::fprintf(stderr, " %s", msg);
     std::fprintf(stderr, "\n");
 
     halt(0);

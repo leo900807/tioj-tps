@@ -7,14 +7,14 @@ set -euo pipefail
 # Testcase name (provided to be used, just in case!)
 test_name="$1"
 
+# Location of solution standard output file
+sol_stdout="$2"
+
 # Location of the input file
-input="$2"
+input="$3"
 
 # Location of judge answer file
-judge_answer="$3"
-
-# Location of solution standard output file
-sol_stdout="$4"
+judge_answer="$4"
 
 # Location of solution standard error file
 sol_stderr="$5"
@@ -45,4 +45,3 @@ else
 		>&2 echo "The output differs from the correct answer."
 	fi
 fi
-

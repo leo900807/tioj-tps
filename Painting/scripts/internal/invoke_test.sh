@@ -18,7 +18,7 @@ function run_solution {
 }
 
 function run_checker {
-	bash "${TEMPLATES}/check_test.sh" "${test_name}" "${input}" "${judge_answer}" "${sol_stdout}" "${sol_stderr}"
+	bash "${TEMPLATES}/check_test.sh" "${test_name}" "${sol_stdout}" "${input}" "${judge_answer}" "${sol_stderr}"
 }
 
 

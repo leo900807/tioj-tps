@@ -1,0 +1,17 @@
+{
+	"sol.cpp": {
+		"verdict": "model_solution"
+	},
+	"par.cpp": {
+		"verdict": "partially_correct"
+	},
+	"wa1.cpp": {
+		"verdict": "incorrect"
+	},
+	"wa2.cpp": {
+		"verdict": "incorrect"
+	},
+	"wa3.cpp": {
+		"verdict": "incorrect"
+	}
+}

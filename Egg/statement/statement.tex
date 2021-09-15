@@ -1,0 +1,135 @@
+\input{config.tex}
+
+\begin{document}
+\section*{\bd{第三題：丟雞蛋問題(Egg) \color{blue}{[此題為互動題 Interactive]}}}
+\subsection*{\bd{問題敘述}}
+丟雞蛋問題是一個經典的題目，你現在正身處於一棟 $M$ 層樓高的大樓，手上有 $60$ 顆一模一樣的雞蛋，已知這些雞蛋只要在\bd{\color{red}{超過 $h$ 樓}}的地方將其摔出就會破裂；不超過則不會。但由於我們目前還不知道 $h$ 是多少，請你在摔完這些雞蛋之前，回答出 $h$ 的值。
+\subsection*{\bd{實作細節}}
+\subsubsection*{\bd{C++}}
+
+你需要在首行加入 \texttt{\#include "Egg.h"}，並完成以下函式：
+
+\begin{lstlisting}[language = C++]
+long long height_limit(long long M);
+\end{lstlisting}
+
+\begin{itemize}
+    \item $M$ 代表 $h$ 的範圍介於 $[1,M]$，其中 $h$ 為整數, $1\le M\le 10^{18}$。
+    \item 該函式需要在被呼叫後，回傳 $h$ 的正確數值。
+\end{itemize}
+
+你的程式可以呼叫以下函式：
+
+\begin{lstlisting}[language = C++]
+int is_broken(long long k);
+\end{lstlisting}
+
+\begin{itemize}
+    \item 代表你要將一顆雞蛋從高度 $k$ 的樓層摔下去，\texttt{is\_broken($k$)} 會回傳 $1$ 或 $0$，如果回傳 $1$ 代表雞蛋破了；$0$ 則代表雞蛋沒破。$k$ 必須是一個介於 $[1,M]$ 的整數。
+    \item 該函式只能被呼叫 $60$ 次，即使雞蛋沒破，你也無法將其回收。
+\end{itemize}
+
+如果不符合上述條件限制，你的程式會被判為 \bd{Wrong Answer}；否則你的程式會被判斷為 \bd{Accepted}。
+
+\subsubsection*{\bd{Python3}}
+
+你需要完成以下函式：
+
+\begin{lstlisting}[language = python]
+def height_limit(M: int) -> int
+\end{lstlisting}
+
+\begin{itemize}
+    \item $M$ 代表 $h$ 的範圍介於 $[1,M]$，其中 $h$ 為整數, $1\le M\le 10^{18}$。
+    \item 該函式需要在被呼叫後，回傳 $h$ 的正確數值。
+\end{itemize}
+
+你的程式可以呼叫以下函式：
+
+\begin{lstlisting}[language = python]
+def is_broken(k: int) -> int
+\end{lstlisting}
+
+\begin{itemize}
+    \item 代表你要將一顆雞蛋從高度 $k$ 的樓層摔下去，\texttt{is\_broken($k$)} 會回傳 $1$ 或 $0$，如果回傳 $1$ 代表雞蛋破了；$0$ 則代表雞蛋沒破。$k$ 必須是一個介於 $[1,M]$ 的整數。
+    \item 該函式只能被呼叫 $60$ 次，即使雞蛋沒破，你也無法將其回收。
+    \item 請在 \texttt{height\_limit} 函式內的第一行加入 \texttt{from \_\_main\_\_ import is\_broken} 來導入此函式，才能做使用。如：
+
+\begin{lstlisting}[language = python]
+def height_limit(M: int) -> int:
+    from __main__ import is_broken
+\end{lstlisting}
+\end{itemize}
+
+如果不符合上述條件限制，你的程式會被判為 \bd{Wrong Answer}；否則你的程式會被判斷為 \bd{Accepted}。
+
+\subsection*{\bd{互動範例}}
+考慮以下的測試資料： $M=10, h=4$。
+
+一個被評分程式判斷為 \bd{Accepted} 的互動例子顯示如下：
+\begin{center}
+    \begin{tabular}[t]{@{}ll@{}}
+    \toprule
+    評分程式端 & 參賽者端\\
+    \midrule
+    呼叫 \texttt{height\_limit($10$)} & \\
+    回傳 $0$ & 呼叫 \texttt{is\_borken($1$)}\\
+    回傳 $0$ & 呼叫 \texttt{is\_borken($2$)}\\
+    回傳 $0$ & 呼叫 \texttt{is\_borken($3$)}\\
+    回傳 $0$ & 呼叫 \texttt{is\_borken($4$)}\\
+    回傳 $1$ & 呼叫 \texttt{is\_borken($5$)}\\
+    & 回傳 $4$\\
+    \bottomrule
+    \end{tabular}
+\end{center}
+\subsection*{\bd{評分說明}}
+本題共有 $4$ 組測試題組，條件限制如下所示。每一組可有一或多筆測試資料，該組所有測試資料皆需答對才會獲得該組分數。
+\begin{center}
+    \begin{tabular}[t]{@{}ccl@{}}
+    \toprule
+    子任務 & 分數 & 額外輸入限制\\
+    \midrule
+    0 & 0  & 互動範例（$M=10, h=4$）。\\
+    1 & 12 & $M=2$。\\
+    2 & 20 & $M=60$。\\
+    3 & 68 & 無額外限制。\\
+    \bottomrule
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\subsection*{\bd{範例評分程式}}
+範例評分程式以下列格式讀取輸入：
+\begin{itemize}
+    \item 第一列： $M\;h$
+\end{itemize}
+其中 $M,h$ 如題目所述。\\
+
+\bd{請注意：使用自己上傳的測試資料進行測試時，沒有下面 MSG 描述的情形時你會得到 Accepted。}如果你的程式被評為 \bd{Accepted}，範例評分程式會輸出 Accepted: $q$，其中 $q$ 表示呼叫 \texttt{is\_broken} 函式的總次數。如果你的程式被評為 \bd{Wrong Answer}，範例評分程式會輸出 Wrong Answer： MSG，其中 MSG 格式與意義如下：
+\begin{itemize}
+    \item invalid broken query: 不合法的 \texttt{is\_broken} 呼叫。
+    \item too many queries: 呼叫上述函式的總次數超過 $60$ 次。
+    \item incorrect height: \texttt{height\_limit} 回傳的值與題目的 $h$ 不相符。
+\end{itemize}
+
+在 CMS 內的附件檔案中，有一個名為「Egg.zip」的壓縮檔，下載後解壓縮可以找到三個資料夾「cpp」、「py」和「examples」，資料夾的意義分別為：
+\begin{itemize}
+    \item cpp: 內部包含一個檔案「Egg.cpp」，你可以直接上傳該檔案來獲得 12 分，並且往後你要寫的程式都可以參考這份檔案，並在這份檔案內進行修改、編譯及執行。
+
+\bd{請注意，檔案內有兩行註解分別為「do not modify above」和「do not modify below」，這兩行意味著希望你盡量只更動被這兩行夾住的區域，若你對互動題並沒有很熟悉，請不要更動外面的區域，更動外面的區域不會也不可能讓你能直接拿到更高的分數。}
+
+基本上你不需要更動除此之外的檔案，但若有需求可以在理解運作原理後進行更動。
+
+    \item py: 內部包含一個檔案「Egg.py」，你可以直接上傳該檔案來獲得 12 分，並且往後你要寫的程式都可以參考這份檔案，並在這份檔案內進行修改。
+
+若要執行程式，請切換到另一個檔案「grader.py」，直接執行後「grader.py」會嘗試與你修改過的「Egg.py」做連結後開始運行。\bd{請盡量只更動「Egg.py」，若你對互動題並沒有很熟悉，請不要更動「grader.py」，更動「grader.py」不會也不可能讓你能直接拿到更高的分數。}
+
+基本上你不需要更動除此之外的檔案，但若有需求可以在理解運作原理後進行更動。
+
+    \item examples: 內部包含互動範例的輸入和合法輸出。
+\end{itemize}
+
+\bd{請不要嘗試撰寫題目指定需要函式以外的任何東西，例如自行輸入、輸出等，無論是「grader.cpp」還是「grader.py」都僅供參考用，並與 Judge 上的有所落差。若有疑似偷取資料的行為，將視為作弊，嚴重者可能會取消資格並以校規處分。}
+
+\end{document}

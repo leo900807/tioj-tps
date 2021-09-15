@@ -1,0 +1,29 @@
+{
+	"global_validators": ["val.cpp"],
+	"subtasks": {
+		"samples": {
+			"index": 0,
+			"score": 0,
+			"text": "範例測資"
+		},
+		"s1": {
+			"index": 1,
+			"score": 20,
+			"text": "$N=2, M=1$",
+			"validators": ["val1.cpp"]
+		},
+		"s2": {
+			"index": 2,
+			"score": 30,
+			"text": "$M=1$",
+			"validators": ["val2.cpp"]
+		},
+		"s3": {
+			"index": 3,
+			"score": 50,
+			"text": "$M=100$，你在這個子任務會獲得的分數是你輸出正確的數對數量一半。",
+			"validators": ["val3.cpp"]
+		}
+	}
+}
+

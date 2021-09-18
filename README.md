@@ -29,7 +29,6 @@
 
 `ABN/` <font color="red"><B>為 special judge 範例資料夾</B></font>  
 `Egg/` <font color="red"><B>為互動題範例資料夾</B></font>  
-`Sudoku/` <font color="red"><B>為 output only 範例資料夾</B></font>  
 `Template/` <font color="red"><B>為空資料夾，可以直接複製成新的題目資料夾</B></font>
 
 ### 檔案
@@ -66,16 +65,6 @@ TPS 使用的腳本，基本上不會動到
 
 題目的 `.tex` , `.pdf` 檔案存放於此  
 
-題本需要使用指定的 LaTeX 格式撰寫，細項可以參考 `Template/statement/statement.tex`  
-
-編譯題本時，可在根資料夾內使用 `./scripts/compile_statement.sh <prob-name>` 指令編譯  
-
-編譯題本使用 XeLaTeX，若不是在我們的工作站的話需先安裝
-
-```
-$ sudo apt install texlive-xetex
-```
-
 ## validator/
 
 驗證測資正確性所使用的程式，包含但不限於變數範圍、輸入格式以及所有子任務的限制  
@@ -88,7 +77,7 @@ $ sudo apt install texlive-xetex
 
 <font color="red"><B>請注意 Makefile 中編譯出來檔案的名稱須為 checker.exe 且在</B></font> `chmod +x` <font color="red"><B>後須可執行</B></font>  
 
-`checker/`<font color="red"><B> 中的 testlib.h 有修改過以符合 CMS，請直接複製</B></font> `template/` <font color="red"><B>資料夾中的使用</B></font>
+`checker/`<font color="red"><B> 中的 testlib.h 有修改過以符合 TIOJ，請直接複製</B></font> `Template/` <font color="red"><B>資料夾中的使用</B></font>
 
 ## grader/
 
@@ -97,7 +86,6 @@ $ sudo apt install texlive-xetex
 - `cpp/`
 - `c/`
 - `py/`
-- `java/`
 
 並且資料夾內會有各語言的 grader，下方以 cpp 為例
 

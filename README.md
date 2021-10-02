@@ -1,9 +1,12 @@
 # TPS 使用說明
 
-[Readme file on HackMD](https://hackmd.io/@leo900807/TPS-tutorial)
+[Readme file on HackMD](https://hackmd.io/@leo900807/TPS-tutorial)  
+[Testlib.h 使用說明 by leo](https://hackmd.io/iWbGmRhAR1-beed0-94hcQ)
 
 - [題目結構](#題目結構)
 - [TPS 指令](#TPS-指令)
+
+此版本的 tps 有更改過以符合 TIOJ
 
 ## 題目結構
 
@@ -127,7 +130,7 @@ TPS 使用的腳本，基本上不會動到
 
 ## problem.json
 
-題目的設定檔，包含題目的時限與一些 CMS 的設定，詳細撰寫方式請參見範例資料夾或是 [TPS 的說明](https://github.com/ioi-2017/tps/tree/master/docs#problemjson)
+題目的設定檔，包含題目的時限與一些題目的設定，詳細撰寫方式請參見範例資料夾或是 [TPS 的說明](https://github.com/ioi-2017/tps/tree/master/docs#problemjson)
 
 ## solutions.json
 

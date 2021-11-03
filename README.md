@@ -80,7 +80,9 @@ TPS 使用的腳本，基本上不會動到
 
 <font color="red"><B>請注意 Makefile 中編譯出來檔案的名稱須為 checker.exe 且在</B></font> `chmod +x` <font color="red"><B>後須可執行</B></font>  
 
-`checker/`<font color="red"><B> 中的 testlib.h 有修改過以符合 TIOJ，請直接複製</B></font> `Template/` <font color="red"><B>資料夾中的使用</B></font>
+`checker/`<font color="red"><B> 中的 testlib.h 有修改過以符合 TIOJ，請直接複製</B></font> `Template/` <font color="red"><B>資料夾中的使用</B></font>  
+
+<font color="red"><B>並請勿使用 </B></font>`gen/`<font color="red"><B> 與 </B></font>`validator/` <font color="red"><B>中的，兩邊的 testlib.h 版本不同</B></font>
 
 ## grader/
 
